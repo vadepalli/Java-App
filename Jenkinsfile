@@ -15,7 +15,7 @@ pipeline {
             }
         }
         
-        stage('archiving the artifacts') {
+        stage('archiving the artifact') {
             steps {
                 archiveArtifacts artifacts: 'target/maven-web-application.war', followSymlinks: false
             }
