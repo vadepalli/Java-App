@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     stages {
-        stage('cloning the code') {
+        stage('cloning the code from GitHub') {
             steps {
                 git 'https://github.com/RAKHEE001/JAVA-APP.git'
             }
