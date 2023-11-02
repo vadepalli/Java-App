@@ -1,2 +1,4 @@
-FROM tomcat:8.0.20-jre8
-COPY target/maven-web-app*.war /usr/local/tomcat/webapps/maven-web-application.war
+FROM open jdk:8
+EXPOSE 8082
+ADD target/maven-web-application.war maven-web-application.war
+ENTRYPOINT ['java',''-war','/maven-web-application.war']
